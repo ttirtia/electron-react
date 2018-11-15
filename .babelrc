@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "electron": 3.0
+        },
+        "modules": false,
+        "forceAllTransforms": true
+      }
+    ],
+    "@babel/react"
+  ]
+}

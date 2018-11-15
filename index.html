@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Electron - React</title>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+<script>
+  if (process.env.NODE_ENV === 'test') {
+    require('@babel/register')({
+      presets: [
+        ['@babel/env', {
+          targets: {
+            electron: 3.0
+          },
+        }],
+        '@babel/react',
+      ],
+    });
+    require('./src/index.jsx');
+  } else {
+    require('./src/app.min.js');
+  }
+</script>
+</html>
